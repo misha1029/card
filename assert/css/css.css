@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+:root{
+    --main-bg-color: white;
+    --user-picture-size: 120px;
+    --user-picture-border-size: 4px;
+
+}
+
+body{
+    background-color: orange;
+    font-family: 'Cantarell', sans-serif;
+
+}
+
+.flexContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cardContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+    max-width: 400px;
+    flex: 1;
+    margin: 20px 30px;
+    overflow: hidden;
+
+    border-radius: 20px;
+    background-color: var(--main-bg-color);
+    margin-top: 20px;
+
+}
+
+.cardHeader{
+    background-image: url("../../images.jpg");
+    background-size: cover;
+    height: 120px;
+    width: 100%;
+}
+
+.userAvatar{
+    border-radius: 50%;
+    width: var(--user-picture-size);
+    height: var(--user-picture-size);
+    border: var(--user-picture-border-size);
+    border-style: solid;
+    border-color: var(--main-bg-color);
+    margin-top: calc(var(--user-picture-size)/2 * -1);
+    overflow: hidden;
+    box-sizing: border-box;
+
+}
+.userAvatar > img{
+    object-fit: cover;
+    width: calc(var(--user-picture-size) - var(--user-picture-border-size)*2);
+}
+
+.contactLink{
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid gray;
+    object-fit: cover;
+    background-size: cover;
+    background-image: url("../../twitter.png");
+    cursor: pointer;
+
+
+}
+
+.contactLink + .contactLink{
+    margin-left: 20px;
+
+}
+
+.cardContainer > h1{
+    font-size: 30px;
+    color: black;
+    margin-top: 10px;
+    text-align: center;
+
+
+}
+.cardContainer > h2{
+    font-size: 20px;
+    opacity: 0.4;
+    color: black;
+    margin-top: 0px;
+    margin-left: 20px;
+
+}
+.cardContainer > h3{
+    font-size: 20px;
+    opacity: 0.6;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+footer{
+    margin-top: auto;
+
+}
